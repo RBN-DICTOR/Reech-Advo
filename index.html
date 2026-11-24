@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Reech &amp; Co Advocate | Legal Services in Juba, South Sudan</title>
+<meta name="description" content="Reech &amp; Co Advocate is a legal practice in Hai Malakal, Juba, South Sudan. Clear, dependable legal advice and representation.">
+<meta name="theme-color" content="#05070d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+
+<style>
+:root{
+  --ink:#05070d; --ink2:#0a0f1c; --gold:#d4af6a; --gold2:#f3dca4; --ivory:#f4efe4;
+  --mute:rgba(244,239,228,.68); --line:rgba(212,175,106,.24);
+  --serif:'Cormorant Garamond','Times New Roman',serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-width:none;-webkit-text-size-adjust:100%}
+html::-webkit-scrollbar{display:none}
+body{background:radial-gradient(1200px 700px at 70% 20%,#14203d 0%,transparent 60%),radial-gradient(900px 600px at 10% 90%,#2a2010 0%,transparent 60%),var(--ink);
+  color:var(--ivory);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+#gl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0}
+.vignette{position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(ellipse at center,transparent 45%,rgba(5,7,13,.72) 100%),
+  linear-gradient(to bottom,rgba(5,7,13,.55),transparent 18%,transparent 78%,rgba(5,7,13,.6))}
+.grain{position:fixed;inset:-50%;z-index:2;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+/* preloader */
+#pre{position:fixed;inset:0;z-index:100;background:var(--ink);display:grid;place-items:center;transition:opacity 1s ease .2s,visibility 1s .2s}
+body.loaded #pre{opacity:0;visibility:hidden;pointer-events:none}
+.pre-in{text-align:center}
+.mono{width:92px;height:92px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;margin:0 auto 22px;
+  font-family:var(--serif);font-size:34px;color:var(--gold2);letter-spacing:.04em;position:relative}
+.mono::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid transparent;border-top-color:var(--gold);animation:spin 1.4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pre-name{font-family:var(--serif);font-size:20px;letter-spacing:.42em;text-transform:uppercase;color:var(--mute)}
+.pre-bar{width:180px;height:1px;background:rgba(255,255,255,.12);margin:20px auto 0;overflow:hidden}
+.pre-bar i{display:block;height:100%;width:40%;background:var(--gold);animation:bar 1.3s ease-in-out infinite}
+@keyframes bar{0%{transform:translateX(-100%)}100%{transform:translateX(260%)}}
+#pre .msg{display:none;margin-top:18px;font-size:13px;color:var(--mute);max-width:320px}
+
+/* nav */
+nav.top{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:22px 4vw;transition:background .5s,padding .5s,backdrop-filter .5s}
+nav.top.scrolled{background:rgba(5,7,13,.55);backdrop-filter:blur(14px);padding:14px 4vw;border-bottom:1px solid rgba(212,175,106,.12)}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .mono{width:42px;height:42px;font-size:16px;margin:0}
+.brand .mono::after{display:none}
+.brand b{display:block;font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}
+.brand small{display:block;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.links{display:flex;gap:34px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.links a{position:relative;padding:6px 0;color:var(--mute);transition:color .3s}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.links a:hover,.links a.on{color:var(--ivory)}
+.links a:hover::after,.links a.on::after{transform:scaleX(1);transform-origin:left}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 28px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  background:linear-gradient(135deg,#f3dca4,#c9a05a 55%,#a67c3a);color:#1a1205;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s;
+  box-shadow:0 10px 40px -12px rgba(212,175,106,.55)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 50px -12px rgba(212,175,106,.75)}
+.btn::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}
+.btn:hover::before{transform:translateX(120%)}
+.btn.ghost{background:rgba(255,255,255,.04);color:var(--ivory);border:1px solid var(--line);box-shadow:none;backdrop-filter:blur(8px)}
+.btn.ghost:hover{border-color:var(--gold);background:rgba(212,175,106,.08)}
+.btn.sm{padding:11px 20px}
+
+/* layout */
+main{position:relative;z-index:10}
+section{min-height:100vh;min-height:100svh;padding:14vh 6vw 10vh;display:flex;align-items:center;position:relative}
+.left{max-width:600px}
+.right{max-width:560px;margin-left:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:26px}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.01em}
+h1{font-size:clamp(46px,7.4vw,108px)}
+h2{font-size:clamp(38px,5vw,74px);margin-bottom:26px}
+h1 em,h2 em{font-style:italic;color:var(--gold2);font-weight:400}
+p.lead{font-size:clamp(16px,1.35vw,19px);color:var(--mute);max-width:520px;font-weight:300}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.glass{background:linear-gradient(150deg,rgba(22,30,52,.55),rgba(8,10,18,.6));border:1px solid var(--line);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border-radius:20px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);filter:blur(8px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s;transition-delay:calc(var(--d,0)*90ms + .1s)}
+.in .rv{opacity:1;transform:none;filter:none}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .14em;margin-bottom:-.14em}
+.w>span{display:inline-block;transform:translateY(115%) rotate(4deg);transition:transform 1.15s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*70ms + .15s)}
+.in .w>span{transform:none}
+
+/* hero */
+#hero .meta{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:54px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+#hero .meta span{display:flex;align-items:center;gap:10px}
+#hero .meta i{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.scrollcue{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--mute)}
+.scrollcue i{width:1px;height:54px;background:linear-gradient(var(--gold),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* about */
+.pillars{display:grid;gap:14px;margin-top:38px}
+.pillar{display:flex;gap:20px;padding:20px 24px;align-items:flex-start}
+.pillar b{font-family:var(--serif);font-size:30px;color:var(--gold);font-weight:500;line-height:1}
+.pillar h4{font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+.pillar p{font-size:14.5px;color:var(--mute);font-weight:300}
+
+/* practice */
+#practice{flex-direction:column;align-items:stretch;justify-content:flex-end}
+#practice .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:34px}
+#practice h2{margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;perspective:1100px}
+.card{padding:30px 28px 28px;position:relative;transform-style:preserve-3d;transition:transform .25s ease-out,border-color .4s;overflow:hidden;min-height:210px}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(243,220,164,.18),transparent 55%);opacity:0;transition:opacity .35s}
+.card:hover{border-color:rgba(243,220,164,.6)}
+.card:hover::before{opacity:1}
+.card .n{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.2em}
+.card h3{font-family:var(--serif);font-weight:500;font-size:28px;line-height:1.1;margin:30px 0 10px;transform:translateZ(30px)}
+.card p{font-size:14px;color:var(--mute);font-weight:300;transform:translateZ(14px)}
+.card svg{position:absolute;right:22px;top:22px;width:38px;height:38px;stroke:var(--gold);fill:none;stroke-width:1.2;opacity:.8;transform:translateZ(40px)}
+
+/* approach */
+.steps{position:relative;margin-top:40px;padding-left:46px}
+.steps::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:1px;background:linear-gradient(var(--gold),rgba(212,175,106,.05));transform-origin:top;transform:scaleY(0);transition:transform 2.2s cubic-bezier(.3,.7,.2,1) .3s}
+.in .steps::before{transform:scaleY(1)}
+.step{position:relative;padding-bottom:30px}
+.step::before{content:"";position:absolute;left:-41px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--ink);border:1px solid var(--gold);box-shadow:0 0 0 4px rgba(212,175,106,.12)}
+.step small{font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.step h4{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.1;margin:4px 0 4px}
+.step p{font-size:14.5px;color:var(--mute);font-weight:300;max-width:440px}
+
+/* trust */
+.rating{padding:44px 46px;display:flex;flex-direction:column;gap:6px}
+.rating .big{font-family:var(--serif);font-size:clamp(84px,9vw,140px);line-height:.9;font-weight:500;background:linear-gradient(135deg,#f9e8bd,#c9a05a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stars{display:flex;gap:6px;color:var(--gold2);font-size:22px;letter-spacing:2px;margin-top:8px}
+.rating small{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.commit{margin-top:22px;display:grid;gap:12px}
+.commit div{display:flex;gap:16px;align-items:center;padding:16px 22px;font-size:15px}
+.commit svg{flex:none;width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.4}
+
+/* contact */
+#contact{flex-direction:column;align-items:stretch;justify-content:center;padding-bottom:0}
+.contact-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;margin-bottom:8vh}
+.info{padding:34px 34px 30px;display:grid;gap:22px}
+.info .row{display:flex;gap:18px;align-items:flex-start}
+.info .row svg{flex:none;width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.4;margin-top:3px}
+.info small{display:block;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.info span{font-size:17px}
+footer{border-top:1px solid rgba(212,175,106,.16);padding:26px 0 34px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--mute);letter-spacing:.06em}
+footer em{font-style:normal;color:var(--gold)}
+
+/* HUD */
+.rail{position:fixed;right:2.2vw;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:18px;align-items:flex-end}
+.rail::before{content:"";position:absolute;right:4px;top:6px;bottom:6px;width:1px;background:rgba(255,255,255,.14)}
+.rail i{position:absolute;right:4px;top:6px;width:1px;height:calc((100% - 12px)*var(--p,0));background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.rail a{position:relative;display:flex;align-items:center;gap:14px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:transparent;transition:color .3s}
+.rail a b{width:9px;height:9px;border-radius:50%;background:var(--ink);border:1px solid rgba(255,255,255,.45);transition:all .4s;position:relative;z-index:1}
+.rail a:hover,.rail a.on{color:var(--ivory)}
+.rail a.on b{background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 5px rgba(212,175,106,.2),0 0 16px var(--gold)}
+.hud{position:fixed;left:4vw;bottom:28px;z-index:40;display:flex;align-items:center;gap:18px}
+.tour{display:flex;align-items:center;gap:12px;padding:10px 20px 10px 12px;border-radius:999px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;transition:border-color .3s,background .3s}
+.tour:hover{border-color:var(--gold)}
+.tour .ic{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#f3dca4,#b78a46);display:grid;place-items:center;color:#1a1205}
+.tour .ic svg{width:12px;height:12px;fill:currentColor}
+.tour .pause{display:none}
+.tour.on .pause{display:block}.tour.on .play{display:none}
+.tour.on{border-color:var(--gold);background:rgba(212,175,106,.1)}
+.count{font-family:var(--serif);font-size:20px;letter-spacing:.12em;color:var(--mute)}
+.count b{color:var(--ivory);font-weight:500}
+.count span{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:-2px}
+.tourbar{position:fixed;left:0;top:0;height:2px;z-index:60;background:linear-gradient(90deg,transparent,var(--gold2));width:calc(var(--p,0)*100%);box-shadow:0 0 12px var(--gold)}
+
+/* cursor */
+.cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid rgba(243,220,164,.7);border-radius:50%;z-index:90;pointer-events:none;
+  transition:width .3s,height .3s,margin .3s,background .3s,opacity .3s;mix-blend-mode:difference;opacity:0}
+.cur.show{opacity:1}
+.cur.big{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(243,220,164,.15)}
+@media (hover:none){.cur{display:none}}
+
+@media (max-width:980px){
+  .links{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .contact-wrap{grid-template-columns:1fr}
+  .rail{display:none}
+  .right{margin-left:0}
+}
+@media (max-width:640px){
+  section{padding:15vh 6vw 12vh}
+  .grid{grid-template-columns:1fr}
+  .card{min-height:0}
+  .hud{left:4vw;right:4vw;bottom:16px;justify-content:space-between}
+  .count span{display:none}
+  nav.top .btn{display:none}
+  .rating{padding:30px}
+  #hero{align-items:flex-end}
+  .scrollcue{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .grain{animation:none}
+  .rv,.w>span{transition-duration:.01s}
+}
+</style>
+</head>
+<body>
+
+<div id="pre">
+  <div class="pre-in">
+    <div class="mono">R&amp;C</div>
+    <div class="pre-name">Reech &amp; Co</div>
+    <div class="pre-bar"><i></i></div>
+    <div class="msg" id="premsg">The 3D scene could not load (it needs an internet connection and WebGL). The site content is still available below.</div>
+  </div>
+</div>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="vignette"></div>
+<div class="grain"></div>
+<div class="tourbar" id="tourbar"></div>
+<div class="cur" id="cur"></div>
+
+<nav class="top" id="nav">
+  <a class="brand" href="#hero" data-go="0" aria-label="Reech &amp; Co Advocate home">
+    <span class="mono">R&amp;C</span>
+    <span><b>Reech &amp; Co</b><small>Advocate</small></span>
+  </a>
+  <div class="links" id="links">
+    <a href="#about" data-go="1">The Firm</a>
+    <a href="#practice" data-go="2">Practice</a>
+    <a href="#approach" data-go="3">Approach</a>
+    <a href="#trust" data-go="4">Trust</a>
+    <a href="#contact" data-go="5">Contact</a>
+  </div>
+  <a class="btn sm" href="tel:+211956744222">Call now</a>
+</nav>
+
+<aside class="rail" id="rail" aria-label="Section navigation">
+  <i></i>
+  <a href="#hero" data-go="0">Welcome<b></b></a>
+  <a href="#about" data-go="1">The Firm<b></b></a>
+  <a href="#practice" data-go="2">Practice<b></b></a>
+  <a href="#approach" data-go="3">Approach<b></b></a>
+  <a href="#trust" data-go="4">Trust<b></b></a>
+  <a href="#contact" data-go="5">Contact<b></b></a>
+</aside>
+
+<div class="hud">
+  <button class="tour glass" id="tour" aria-pressed="false" aria-label="Toggle auto tour">
+    <span class="ic">
+      <svg class="play" viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg>
+      <svg class="pause" viewBox="0 0 12 12"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>
+    </span>
+    <span id="tourlabel">Auto tour</span>
+  </button>
+  <div class="count"><b id="cnum">01</b> / 06<span id="cname">Welcome</span></div>
+</div>
+
+<main id="main">
+
+  <!-- 1 HERO -->
+  <section id="hero" data-title="Welcome">
+    <div class="left">
+      <div class="eyebrow rv" style="--d:0">Legal Services &middot; Juba, South Sudan</div>
+      <h1 data-split>Counsel you can <em>stand behind.</em></h1>
+      <p class="lead rv" style="--d:6;margin-top:30px">A Juba law practice offering clear, dependable legal advice and representation for individuals, families and businesses.</p>
+      <div class="cta rv" style="--d:7">
+        <a class="btn" href="tel:+211956744222">Book a consultation</a>
+        <a class="btn ghost" href="#practice" data-go="2">Explore practice areas</a>
+      </div>
+      <div class="meta rv" style="--d:9">
+        <span><i></i>Hai Malakal, Juba</span>
+        <span><i></i>Rated 4.5 on Google</span>
+      </div>
+    </div>
+    <div class="scrollcue"><span>Scroll</span><i></i></div>
+  </section>
+
+  <!-- 2 ABOUT -->
+  <section id="about" data-title="The Firm">
+    <div class="right">
+      <div class="eyebrow rv">The Firm</div>
+      <h2 data-split>A practice built on clarity, <em>discretion</em> and care.</h2>
+      <p class="lead rv" style="--d:2">Reech &amp; Co Advocate is a legal practice in Hai Malakal, Juba. We help clients understand where they stand, what their options are and what comes next, in plain language and without the legal fog.</p>
+      <div class="pillars">
+        <div class="pillar glass rv" style="--d:3"><b>I</b><div><h4>Clarity</h4><p>Straight answers, honest assessments and no surprises in how we advise.</p></div></div>
+        <div class="pillar glass rv" style="--d:4"><b>II</b><div><h4>Discretion</h4><p>Your matter stays your matter. Confidentiality is the starting point.</p></div></div>
+        <div class="pillar glass rv" style="--d:5"><b>III</b><div><h4>Diligence</h4><p>Careful preparation, attention to detail and follow-through to the end.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 PRACTICE -->
+  <section id="practice" data-title="Practice">
+    <div class="head">
+      <div>
+        <div class="eyebrow rv">Areas of Practice</div>
+        <h2 data-split>Where we can <em>help.</em></h2>
+      </div>
+      <p class="lead rv" style="--d:3;max-width:380px">From everyday questions to complex disputes, we work with you from first conversation to resolution.</p>
+    </div>
+    <div class="grid">
+      <article class="card glass rv" style="--d:1"><span class="n">01</span>
+        <svg viewBox="0 0 40 40"><rect x="6" y="14" width="28" height="18" rx="2"/><path d="M15 14v-4h10v4M6 23h28"/></svg>
+        <h3>Corporate &amp; Commercial</h3><p>Company setup, contracts, agreements and day-to-day advice for growing businesses.</p></article>
+      <article class="card glass rv" style="--d:2"><span class="n">02</span>
+        <svg viewBox="0 0 40 40"><path d="M5 19L20 6l15 13M9 17v16h22V17M16 33V23h8v10"/></svg>
+        <h3>Land &amp; Property</h3><p>Title checks, transfers, leases and disputes, so your property rights are secure.</p></article>
+      <article class="card glass rv" style="--d:3"><span class="n">03</span>
+        <svg viewBox="0 0 40 40"><circle cx="14" cy="14" r="5"/><circle cx="27" cy="16" r="4"/><path d="M5 33c0-6 4-10 9-10s9 4 9 10M23 24c5-1 10 2 12 9"/></svg>
+        <h3>Family &amp; Succession</h3><p>Guidance on family matters, wills and estates, handled with sensitivity.</p></article>
+      <article class="card glass rv" style="--d:4"><span class="n">04</span>
+        <svg viewBox="0 0 40 40"><path d="M20 5v30M10 35h20M8 12h24M8 12l-4 11a5 5 0 0 0 8 0zM32 12l-4 11a5 5 0 0 0 8 0z"/></svg>
+        <h3>Litigation &amp; Disputes</h3><p>Representation and negotiation to resolve disagreements, in court or out of it.</p></article>
+      <article class="card glass rv" style="--d:5"><span class="n">05</span>
+        <svg viewBox="0 0 40 40"><rect x="8" y="6" width="24" height="29" rx="2"/><path d="M14 14h12M14 20h12M14 26h7"/></svg>
+        <h3>Employment &amp; Labour</h3><p>Contracts, workplace issues and advice for employers and employees alike.</p></article>
+      <article class="card glass rv" style="--d:6"><span class="n">06</span>
+        <svg viewBox="0 0 40 40"><path d="M20 4l13 5v10c0 9-6 14-13 17C13 33 7 28 7 19V9z"/><path d="M14 20l5 5 8-9"/></svg>
+        <h3>Regulatory &amp; Compliance</h3><p>Registration, licensing and compliance support for organisations operating in South Sudan.</p></article>
+    </div>
+  </section>
+
+  <!-- 4 APPROACH -->
+  <section id="approach" data-title="Approach">
+    <div class="left">
+      <div class="eyebrow rv">Our Approach</div>
+      <h2 data-split>Four steps from problem to <em>resolution.</em></h2>
+      <div class="steps rv" style="--d:2">
+        <div class="step"><small>Step 01</small><h4>Listen</h4><p>We start by understanding your situation, your goals and what matters most to you.</p></div>
+        <div class="step"><small>Step 02</small><h4>Advise</h4><p>You receive a clear assessment of your position, your options and the likely path ahead.</p></div>
+        <div class="step"><small>Step 03</small><h4>Act</h4><p>We prepare, negotiate, draft or represent, whatever your matter calls for.</p></div>
+        <div class="step"><small>Step 04</small><h4>Follow through</h4><p>We stay with the matter until it is properly closed, and keep you informed throughout.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 TRUST -->
+  <section id="trust" data-title="Trust">
+    <div class="right">
+      <div class="eyebrow rv">Client Trust</div>
+      <h2 data-split>Trust is <em>earned</em> one matter at a time.</h2>
+      <div class="rating glass rv" style="--d:3">
+        <div class="big">4.5</div>
+        <div class="stars" aria-label="4.5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;<span style="opacity:.55">&#9733;</span></div>
+        <small>Google rating &middot; 2 reviews</small>
+      </div>
+      <div class="commit">
+        <div class="glass rv" style="--d:4"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg>Confidential by default</div>
+        <div class="glass rv" style="--d:5"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Plain-language advice</div>
+        <div class="glass rv" style="--d:6"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>Responsive communication</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 CONTACT -->
+  <section id="contact" data-title="Contact">
+    <div class="contact-wrap">
+      <div class="left">
+        <div class="eyebrow rv">Contact</div>
+        <h2 data-split>Let&rsquo;s talk about <em>your matter.</em></h2>
+        <p class="lead rv" style="--d:3">Call the office to arrange a consultation. We will listen first, then tell you honestly how we can help.</p>
+        <div class="cta rv" style="--d:4">
+          <a class="btn" href="tel:+211956744222">Call +211 956 744 222</a>
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Reech+%26+Co+Advocate+Hai+Malakal+Juba">Get directions</a>
+        </div>
+      </div>
+      <div class="info glass rv" style="--d:3">
+        <div class="row"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <div><small>Office</small><span>Hai Malakal, n.9, 1st floor<br>Juba, South Sudan</span></div></div>
+        <div class="row"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <div><small>Telephone</small><span><a href="tel:+211956744222">+211 956 744 222</a></span></div></div>
+        <div class="row"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <div><small>Hours</small><span>Open until 17:00<br><span style="font-size:13px;color:var(--mute)">As listed on Google Maps. Please call to confirm.</span></span></div></div>
+      </div>
+    </div>
+    <footer>
+      <span>&copy; 2026 <em>Reech &amp; Co Advocate</em>. All rights reserved.</span>
+      <span>Information on this site is general and is not legal advice.</span>
+    </footer>
+  </section>
+</main>
+
+<script>
+/* If the 3D module never starts (offline / no WebGL), reveal the content anyway. */
+window.__reveal = function(){ document.body.classList.add('loaded'); };
+setTimeout(function(){
+  if(!window.__3dStarted){
+    document.getElementById('premsg').style.display='block';
+    setTimeout(function(){ window.__reveal(); document.querySelectorAll('section').forEach(function(s){s.classList.add('in')}); },2600);
+  }
+}, 9000);
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+window.__3dStarted = true;
+history.scrollRestoration = 'manual';
+scrollTo(0,0);
+
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isMobile = matchMedia('(max-width: 800px)').matches;
+const $ = (s,r=document)=>r.querySelector(s);
+const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
+const clamp = (v,a,b)=>Math.min(b,Math.max(a,v));
+
+/* ---------------------------------------------------------------- renderer */
+const canvas = $('#gl');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias:!isMobile, powerPreference:'high-performance' });
+renderer.setPixelRatio(Math.min(devicePixelRatio, isMobile ? 1.5 : 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.15;
+renderer.shadowMap.enabled = !isMobile;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x05070d);
+scene.fog = new THREE.FogExp2(0x05070d, 0.024);
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.environmentIntensity = 0.7;
+
+const camera = new THREE.PerspectiveCamera(45, innerWidth/innerHeight, 0.1, 220);
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.5, 0.7, 0.88);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+/* --------------------------------------------------------------- materials */
+const gold = new THREE.MeshStandardMaterial({ color:0xdcb56d, metalness:1, roughness:0.26 });
+const goldDS = new THREE.MeshStandardMaterial({ color:0xdcb56d, metalness:1, roughness:0.3, side:THREE.DoubleSide });
+const marble = new THREE.MeshPhysicalMaterial({ color:0x121726, metalness:0.15, roughness:0.2, clearcoat:1, clearcoatRoughness:0.12 });
+const stone = new THREE.MeshStandardMaterial({ color:0xd8d0bf, roughness:0.6, metalness:0.05 });
+const glow = new THREE.MeshBasicMaterial({ color:new THREE.Color(0xffd58a).multiplyScalar(1.8) });
+
+function mesh(geo, mat, parent, shadow=true){
+  const m = new THREE.Mesh(geo, mat);
+  m.castShadow = shadow; m.receiveShadow = true;
+  parent && parent.add(m);
+  return m;
+}
+function rod(a, b, r, mat){
+  const dir = new THREE.Vector3().subVectors(b, a);
+  const len = dir.length();
+  const m = new THREE.Mesh(new THREE.CylinderGeometry(r, r, len, 8), mat);
+  m.position.copy(a).addScaledVector(dir, 0.5);
+  m.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), dir.normalize());
+  return m;
+}
+
+/* ------------------------------------------------------------------- floor */
+function floorTexture(){
+  const s = 2048, c = document.createElement('canvas'); c.width = c.height = s;
+  const g = c.getContext('2d'), h = s/2;
+  const grd = g.createRadialGradient(h,h,0,h,h,h);
+  grd.addColorStop(0,'#1a2238'); grd.addColorStop(.45,'#0c1120'); grd.addColorStop(1,'#05070d');
+  g.fillStyle = grd; g.fillRect(0,0,s,s);
+  const px = r => r/60*h;
+  g.strokeStyle = 'rgba(212,175,106,.55)';
+  [[4.2,2.5],[6.5,1.2],[9,1],[15,3],[15.8,1],[26,1.2],[40,1]].forEach(([r,w])=>{ g.lineWidth = w*1.6; g.beginPath(); g.arc(h,h,px(r),0,Math.PI*2); g.stroke(); });
+  g.strokeStyle = 'rgba(212,175,106,.16)'; g.lineWidth = 1.2;
+  for(let i=0;i<72;i++){ const a = i/72*Math.PI*2; g.beginPath(); g.moveTo(h+Math.cos(a)*px(4.4), h+Math.sin(a)*px(4.4)); g.lineTo(h+Math.cos(a)*px(40), h+Math.sin(a)*px(40)); g.stroke(); }
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
+}
+const floor = mesh(new THREE.CircleGeometry(60, 128), new THREE.MeshStandardMaterial({ map:floorTexture(), roughness:0.3, metalness:0.65 }), scene, false);
+floor.rotation.x = -Math.PI/2;
+
+/* ----------------------------------------------------------- scales of justice */
+const scales = new THREE.Group(); scene.add(scales);
+
+mesh(new THREE.CylinderGeometry(3.3,3.7,0.4,72), marble, scales).position.y = 0.2;
+mesh(new THREE.CylinderGeometry(2.5,2.9,0.3,72), gold, scales).position.y = 0.55;
+mesh(new THREE.CylinderGeometry(1.7,2.1,0.55,72), marble, scales).position.y = 0.98;
+mesh(new THREE.TorusGeometry(1.75,0.06,16,96), gold, scales).position.y = 1.26;
+scales.children[scales.children.length-1].rotation.x = Math.PI/2;
+
+const profile = [
+  [1.0,1.25],[0.62,1.35],[0.34,1.7],[0.26,2.1],[0.4,2.5],[0.26,2.9],[0.2,3.3],[0.17,4.4],[0.2,5.6],
+  [0.34,6.0],[0.22,6.25],[0.3,6.5],[0.16,6.75]
+].map(([x,y])=>new THREE.Vector2(x,y));
+mesh(new THREE.LatheGeometry(profile, 72), gold, scales);
+
+const beam = new THREE.Group(); beam.position.y = 7.05; scales.add(beam);
+mesh(new THREE.SphereGeometry(0.34,48,32), gold, scales).position.y = 7.05;
+const bar = mesh(new THREE.CylinderGeometry(0.085,0.085,6.4,24), gold, beam); bar.rotation.z = Math.PI/2;
+mesh(new THREE.CylinderGeometry(0.2,0.2,0.5,32), gold, beam).rotation.x = Math.PI/2;
+[-1,1].forEach(s=>{
+  mesh(new THREE.SphereGeometry(0.17,32,24), gold, beam).position.x = s*3.2;
+  const cap = mesh(new THREE.TorusGeometry(0.28,0.035,12,40), gold, beam); cap.position.x = s*2.2; cap.rotation.y = Math.PI/2;
+});
+mesh(new THREE.ConeGeometry(0.16,0.5,24), gold, scales).position.y = 7.7;
+
+function makePan(){
+  const g = new THREE.Group();
+  const R = 1.4, Y = -2.9;
+  const bowl = mesh(new THREE.SphereGeometry(R,72,28,0,Math.PI*2,Math.PI/2,Math.PI/2), goldDS, g);
+  bowl.scale.y = 0.34; bowl.position.y = Y;
+  const rim = mesh(new THREE.TorusGeometry(R,0.045,14,96), gold, g); rim.rotation.x = Math.PI/2; rim.position.y = Y;
+  [90,210,330].forEach(d=>{
+    const a = d*Math.PI/180, p = new THREE.Vector3(Math.cos(a)*R, Y, Math.sin(a)*R);
+    g.add(rod(new THREE.Vector3(0,0,0), p, 0.018, gold));
+  });
+  mesh(new THREE.TorusGeometry(0.11,0.025,10,32), gold, g);
+  return g;
+}
+const panL = makePan(), panR = makePan();
+panL.position.x = -3.0; panR.position.x = 3.0;
+beam.add(panL, panR);
+// left pan: glowing orb; right pan: small ledger
+const orb = new THREE.Mesh(new THREE.SphereGeometry(0.42,48,32), glow); orb.position.y = -2.9 + 0.5; panL.add(orb);
+const ledger = mesh(new THREE.BoxGeometry(0.95,0.28,0.7), new THREE.MeshStandardMaterial({color:0x1b2a55, roughness:.5, metalness:.2}), panR);
+ledger.position.y = -2.9 + 0.42; ledger.rotation.y = 0.5;
+mesh(new THREE.BoxGeometry(0.97,0.06,0.72), gold, panR).position.set(0,-2.9+0.42,0);
+panR.children[panR.children.length-1].rotation.y = 0.5;
+
+/* halos */
+const halos = [];
+[[5.2,0.012,1.3],[6.0,0.01,1.6],[6.9,0.008,1.9]].forEach(([r,t,m],i)=>{
+  const h = new THREE.Mesh(new THREE.TorusGeometry(r,t*4,8,200), new THREE.MeshBasicMaterial({ color:new THREE.Color(0xf3dca4).multiplyScalar(m), transparent:true, opacity:.75 }));
+  h.position.y = 7.05; h.rotation.x = Math.PI/2 + (i-1)*0.5; h.rotation.y = i*0.6;
+  scene.add(h); halos.push(h);
+});
+
+/* ------------------------------------------------------------ colonnade */
+function fluteTexture(){
+  const c = document.createElement('canvas'); c.width = 256; c.height = 8;
+  const g = c.getContext('2d');
+  for(let i=0;i<8;i++){
+    const x = i*32, gg = g.createLinearGradient(x,0,x+32,0);
+    gg.addColorStop(0,'#fff'); gg.addColorStop(.5,'#3a3a3a'); gg.addColorStop(1,'#fff');
+    g.fillStyle = gg; g.fillRect(x,0,32,8);
+  }
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(3,1); return t;
+}
+const shaftMat = new THREE.MeshStandardMaterial({ color:0xd8d0bf, roughness:0.55, metalness:0.05, bumpMap:fluteTexture(), bumpScale:3 });
+const H = 10;
+function makeColumn(){
+  const g = new THREE.Group();
+  mesh(new THREE.BoxGeometry(2.4,0.5,2.4), stone, g).position.y = 0.25;
+  mesh(new THREE.CylinderGeometry(1.05,1.12,0.35,40), stone, g).position.y = 0.67;
+  mesh(new THREE.CylinderGeometry(0.72,0.84,H-2.3,48), shaftMat, g).position.y = 0.85 + (H-2.3)/2;
+  mesh(new THREE.CylinderGeometry(1.0,0.76,0.5,40), stone, g).position.y = H-0.85-0.05;
+  mesh(new THREE.BoxGeometry(2.1,0.4,2.1), stone, g).position.y = H-0.4;
+  return g;
+}
+const COUNT = 14, RING = 16;
+const colonnade = new THREE.Group(); scene.add(colonnade);
+for(let i=0;i<COUNT;i++){
+  const a = i/COUNT*Math.PI*2, c = makeColumn();
+  c.position.set(Math.cos(a)*RING, 0, Math.sin(a)*RING);
+  c.rotation.y = -a;
+  colonnade.add(c);
+}
+const ent = mesh(new THREE.TorusGeometry(RING,0.55,16,160), new THREE.MeshStandardMaterial({color:0x2a2418, metalness:.9, roughness:.35}), scene, false);
+ent.rotation.x = Math.PI/2; ent.position.y = H+0.45;
+const entGold = mesh(new THREE.TorusGeometry(RING,0.08,10,200), gold, scene, false);
+entGold.rotation.x = Math.PI/2; entGold.position.y = H+1.05;
+
+/* ---------------------------------------------------------- gavel + books */
+const gavel = new THREE.Group(); scene.add(gavel);
+const wood = new THREE.MeshStandardMaterial({ color:0x3b2412, roughness:0.38, metalness:0.1 });
+mesh(new THREE.CylinderGeometry(0.5,0.55,0.22,48), wood, scene).position.set(4.6,0.11,3.2);
+mesh(new THREE.TorusGeometry(0.52,0.025,10,48), gold, scene).position.set(4.6,0.2,3.2);
+scene.children[scene.children.length-1].rotation.x = Math.PI/2;
+const gHead = mesh(new THREE.CylinderGeometry(0.24,0.24,1.0,40), wood, gavel); gHead.rotation.z = Math.PI/2;
+[-0.36,0.36].forEach(x=>{ const b = mesh(new THREE.CylinderGeometry(0.255,0.255,0.07,40), gold, gavel); b.rotation.z = Math.PI/2; b.position.x = x; });
+const gHandle = mesh(new THREE.CylinderGeometry(0.065,0.08,1.7,20), wood, gavel); gHandle.position.y = -0.2; gHandle.rotation.z = 0;
+gavel.position.set(4.6,1.4,3.2); gavel.rotation.set(0.2,0.6,-0.5);
+
+const books = new THREE.Group(); scene.add(books); books.position.set(-4.8,0,3.4); books.rotation.y = 0.5;
+[[0x5a1620,2.0,.34],[0x14264f,1.85,.3],[0x16402f,1.95,.28],[0xe9e0cb,1.8,.26],[0x2b1b3e,1.7,.3]].forEach(([c,w,h],i,arr)=>{
+  const y = arr.slice(0,i).reduce((s,b)=>s+b[2],0) + h/2;
+  const b = mesh(new THREE.BoxGeometry(w,h,1.35), new THREE.MeshStandardMaterial({ color:c, roughness:.55, metalness:.1 }), books);
+  b.position.set((i%2?0.06:-0.05), y, 0); b.rotation.y = (i-2)*0.07;
+  const trim = mesh(new THREE.BoxGeometry(w+.01,0.025,1.36), gold, books); trim.position.set(b.position.x,y+h/2-.05,0); trim.rotation.y = b.rotation.y;
+});
+
+/* --------------------------------------------------------------- particles */
+const PN = isMobile ? 900 : 2200;
+const ppos = new Float32Array(PN*3), pspd = new Float32Array(PN);
+for(let i=0;i<PN;i++){
+  const r = Math.sqrt(Math.random())*34, a = Math.random()*Math.PI*2;
+  ppos[i*3] = Math.cos(a)*r; ppos[i*3+1] = Math.random()*22; ppos[i*3+2] = Math.sin(a)*r;
+  pspd[i] = 0.1 + Math.random()*0.35;
+}
+const pgeo = new THREE.BufferGeometry(); pgeo.setAttribute('position', new THREE.BufferAttribute(ppos,3));
+const dust = new THREE.Points(pgeo, new THREE.PointsMaterial({ color:0xf3dca4, size:0.07, sizeAttenuation:true, transparent:true, opacity:.8, blending:THREE.AdditiveBlending, depthWrite:false }));
+scene.add(dust);
+
+/* ------------------------------------------------------------------ lights */
+scene.add(new THREE.HemisphereLight(0x8fa3d8, 0x1a1408, 0.7));
+const key = new THREE.DirectionalLight(0xffe2b0, 2.6);
+key.position.set(9,18,11); key.castShadow = !isMobile;
+key.shadow.mapSize.set(2048,2048);
+Object.assign(key.shadow.camera,{ left:-14,right:14,top:14,bottom:-14,near:1,far:60 });
+key.shadow.bias = -0.0004; key.shadow.radius = 4;
+scene.add(key);
+const rim = new THREE.PointLight(0x5f84ff, 420, 0, 2); rim.position.set(-11,9,-9); scene.add(rim);
+const warm = new THREE.PointLight(0xffc873, 160, 0, 2); warm.position.set(0,7.5,0); scene.add(warm);
+const fill = new THREE.PointLight(0xffd9a0, 90, 0, 2); fill.position.set(7,3,10); scene.add(fill);
+
+/* ------------------------------------------------------------ camera path */
+const V = (x,y,z)=>new THREE.Vector3(x,y,z);
+const camCurve = new THREE.CatmullRomCurve3([
+  V(0,3.6,14.5),   // hero
+  V(7.5,4.8,9.5),  // firm
+  V(-9,2.4,8.5),   // practice
+  V(1.8,6.9,6.2),  // approach
+  V(-8,5,-8.5),    // trust
+  V(0.5,6.2,16)    // contact
+], false, 'centripetal');
+const lookCurve = new THREE.CatmullRomCurve3([
+  V(-3.4,4.6,0),
+  V(3.4,5.0,0),
+  V(1.5,7.6,0),
+  V(-3.2,6.6,0),
+  V(-3.0,5.0,2.6),
+  V(-4.2,5.2,0)
+], false, 'centripetal');
+
+/* ------------------------------------------------------------ scroll state */
+let tops = [];
+const sections = $$('main > section');
+const N = sections.length;
+function measure(){ tops = sections.map(s=>s.offsetTop); }
+measure();
+new ResizeObserver(measure).observe(document.body);
+addEventListener('load', measure);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+
+function secPos(){
+  const y = scrollY; let i = 0;
+  for(let k=0;k<tops.length;k++) if(y >= tops[k]-1) i = k;
+  const nx = tops[i+1];
+  if(nx === undefined) return i;
+  return i + clamp((y - tops[i])/(nx - tops[i]), 0, 1);
+}
+let sp = 0, spVel = 0, introT = reduceMotion ? 1 : 0, started = false;
+let mx = 0, my = 0, mxs = 0, mys = 0;
+addEventListener('pointermove', e=>{ mx = e.clientX/innerWidth*2-1; my = e.clientY/innerHeight*2-1; }, {passive:true});
+
+/* -------------------------------------------------------------------- loop */
+const tmpP = new THREE.Vector3(), tmpT = new THREE.Vector3();
+let last = performance.now(), time = 0, tilt = 0;
+const colorA = new THREE.Color(0xffc873), colorB = new THREE.Color(0x7fa0ff);
+
+function frame(now){
+  const dt = Math.min((now-last)/1000, 0.05); last = now; time += dt;
+
+  const target = secPos();
+  const prev = sp;
+  sp += (target - sp) * (1 - Math.exp(-dt*3.2));
+  spVel += (((sp-prev)/Math.max(dt,1e-4)) - spVel) * (1 - Math.exp(-dt*6));
+
+  if(started && introT < 1) introT = Math.min(1, introT + dt/3.4);
+  const ie = 1 - Math.pow(1-introT, 4);
+
+  const t = clamp(sp/(N-1), 0, 1);
+  camCurve.getPoint(t, tmpP);
+  lookCurve.getPoint(t, tmpT);
+  mxs += (mx-mxs)*(1-Math.exp(-dt*3)); mys += (my-mys)*(1-Math.exp(-dt*3));
+  camera.position.set(
+    tmpP.x + mxs*0.9 + (1-ie)*-10,
+    tmpP.y - mys*0.5 + Math.sin(time*.5)*.12 + (1-ie)*9,
+    tmpP.z + (1-ie)*16
+  );
+  camera.lookAt(tmpT.x + mxs*0.3, tmpT.y - mys*0.2, tmpT.z);
+
+  // beam: gentle sway, leans with scroll speed (the scales "weigh" the page)
+  const tiltTarget = Math.sin(time*0.7)*0.05 + clamp(spVel*1.4, -0.3, 0.3);
+  tilt += (tiltTarget - tilt) * (1 - Math.exp(-dt*3));
+  beam.rotation.z = tilt;
+  panL.rotation.z = -tilt; panR.rotation.z = -tilt;
+  panL.rotation.y = Math.sin(time*.6)*.15; panR.rotation.y = -Math.sin(time*.6)*.15;
+  orb.scale.setScalar(1 + Math.sin(time*2.2)*0.06);
+
+  halos.forEach((h,i)=>{ h.rotation.z += dt*(0.12+i*0.08)*(i%2?-1:1)*(1+Math.abs(spVel)*6); });
+  gavel.position.y = 1.4 + Math.sin(time*1.1)*0.1;
+  gavel.rotation.z = -0.5 + Math.sin(time*.9)*0.08 - Math.max(0, Math.sin(time*1.1-1))*0.0;
+  colonnade.rotation.y = Math.sin(time*.05)*0.02;
+
+  // dust drift
+  const arr = pgeo.attributes.position.array;
+  for(let i=0;i<PN;i++){
+    let y = arr[i*3+1] + pspd[i]*dt;
+    if(y > 22) y = 0;
+    arr[i*3+1] = y;
+  }
+  pgeo.attributes.position.needsUpdate = true;
+  dust.rotation.y += dt*0.02;
+
+  // mood shifts across sections
+  warm.color.copy(colorA).lerp(colorB, 0.5 + 0.5*Math.sin(sp*0.9));
+  warm.intensity = 150 + Math.sin(time*1.7)*14;
+  bloom.strength = 0.46 + Math.min(Math.abs(spVel)*1.5, 0.35);
+
+  composer.render();
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+function resize(){
+  const w = innerWidth, h = innerHeight, a = w/h;
+  camera.aspect = a; camera.fov = a < 0.8 ? 66 : a < 1.2 ? 54 : 45; camera.updateProjectionMatrix();
+  renderer.setSize(w,h); composer.setSize(w,h);
+}
+addEventListener('resize', resize); resize();
+
+/* ------------------------------------------------------------- UI helpers */
+function splitWords(el){
+  let i = 0;
+  (function walk(node){
+    [...node.childNodes].forEach(ch=>{
+      if(ch.nodeType === 3){
+        const frag = document.createDocumentFragment();
+        ch.textContent.split(/(\s+)/).forEach(part=>{
+          if(!part) return;
+          if(/^\s+$/.test(part)){ frag.appendChild(document.createTextNode(' ')); return; }
+          const w = document.createElement('span'); w.className = 'w';
+          const s = document.createElement('span'); s.textContent = part; s.style.setProperty('--i', i++);
+          w.appendChild(s); frag.appendChild(w);
+        });
+        ch.replaceWith(frag);
+      } else if(ch.nodeType === 1){ walk(ch); }
+    });
+  })(el);
+}
+$$('[data-split]').forEach(splitWords);
+
+const io = new IntersectionObserver(es=>{
+  es.forEach(e=>{ e.target.classList.toggle('in', e.isIntersecting); });
+}, { threshold: 0.28 });
+sections.forEach(s=>io.observe(s));
+
+const nav = $('#nav'), rail = $('#rail'), railLinks = $$('a', rail), navLinks = $$('#links a');
+const cnum = $('#cnum'), cname = $('#cname'), tourbar = $('#tourbar');
+function hud(){
+  nav.classList.toggle('scrolled', scrollY > 40);
+  const idx = clamp(Math.round(secPos()), 0, N-1);
+  railLinks.forEach((a,i)=>a.classList.toggle('on', i===idx));
+  navLinks.forEach(a=>a.classList.toggle('on', +a.dataset.go === idx));
+  cnum.textContent = String(idx+1).padStart(2,'0');
+  cname.textContent = sections[idx].dataset.title;
+  const p = clamp(secPos()/(N-1), 0, 1);
+  rail.style.setProperty('--p', p); tourbar.style.setProperty('--p', p);
+}
+addEventListener('scroll', hud, {passive:true}); hud();
+
+/* ---------------------------------------------------- smooth scroll + tour */
+let anim = null;
+const maxScroll = ()=>document.documentElement.scrollHeight - innerHeight;
+function scrollToY(y, dur, done){
+  cancelAnimationFrame(anim);
+  const y0 = scrollY, t0 = performance.now();
+  y = clamp(y, 0, maxScroll());
+  (function step(n){
+    const k = clamp((n-t0)/dur, 0, 1);
+    const e = k < .5 ? 4*k*k*k : 1 - Math.pow(-2*k+2, 3)/2;
+    scrollTo(0, y0 + (y-y0)*e);
+    if(k < 1) anim = requestAnimationFrame(step); else { anim = null; done && done(); }
+  })(t0);
+}
+function goTo(i){ scrollToY(i === N-1 ? maxScroll() : tops[i], 1900); }
+
+let tourOn = false, tourTimer = null;
+const tourBtn = $('#tour'), tourLabel = $('#tourlabel');
+function currentIndex(){
+  if(scrollY >= maxScroll() - 4) return N-1;
+  let best = 0, d = 1e9;
+  tops.forEach((t,i)=>{ const dd = Math.abs(t - scrollY); if(dd < d){ d = dd; best = i; } });
+  return best;
+}
+function tourNext(){
+  if(!tourOn) return;
+  const next = (currentIndex()+1) % N;
+  const y = next === 0 ? 0 : next === N-1 ? maxScroll() : tops[next];
+  const dur = next === 0 ? 4200 : 2800;
+  scrollToY(y, dur, ()=>{ if(tourOn) tourTimer = setTimeout(tourNext, next === N-1 ? 5200 : 4600); });
+}
+function tourStart(){
+  tourOn = true; tourBtn.classList.add('on'); tourBtn.setAttribute('aria-pressed','true'); tourLabel.textContent = 'Pause tour';
+  clearTimeout(tourTimer); tourTimer = setTimeout(tourNext, 500);
+}
+function tourStop(){
+  if(!tourOn) return;
+  tourOn = false; clearTimeout(tourTimer); cancelAnimationFrame(anim); anim = null;
+  tourBtn.classList.remove('on'); tourBtn.setAttribute('aria-pressed','false'); tourLabel.textContent = 'Resume tour';
+}
+tourBtn.addEventListener('click', ()=> tourOn ? tourStop() : tourStart());
+['wheel','touchstart','keydown','pointerdown'].forEach(ev=>{
+  addEventListener(ev, e=>{
+    if(!tourOn) return;
+    if(e.target && e.target.closest && e.target.closest('#tour')) return;
+    tourStop();
+  }, {passive:true});
+});
+$$('[data-go]').forEach(a=>a.addEventListener('click', e=>{
+  e.preventDefault(); tourStop(); goTo(+a.dataset.go);
+}));
+
+/* ------------------------------------------------------------ card tilt */
+$$('.card').forEach(c=>{
+  c.addEventListener('pointermove', e=>{
+    const r = c.getBoundingClientRect(), x = (e.clientX-r.left)/r.width, y = (e.clientY-r.top)/r.height;
+    c.style.transform = `rotateX(${(.5-y)*10}deg) rotateY(${(x-.5)*12}deg) translateZ(8px)`;
+    c.style.setProperty('--mx', x*100+'%'); c.style.setProperty('--my', y*100+'%');
+  });
+  c.addEventListener('pointerleave', ()=>{ c.style.transform = ''; });
+});
+
+/* ---------------------------------------------------------------- cursor */
+const cur = $('#cur');
+if(matchMedia('(hover:hover)').matches){
+  let cx = 0, cy = 0, tx = 0, ty = 0;
+  addEventListener('pointermove', e=>{ tx = e.clientX; ty = e.clientY; cur.classList.add('show'); }, {passive:true});
+  (function cl(){ cx += (tx-cx)*.2; cy += (ty-cy)*.2; cur.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(cl); })();
+  $$('a,button,.card').forEach(el=>{
+    el.addEventListener('pointerenter', ()=>cur.classList.add('big'));
+    el.addEventListener('pointerleave', ()=>cur.classList.remove('big'));
+  });
+}
+
+/* ------------------------------------------------------------------ intro */
+setTimeout(()=>{
+  window.__reveal();
+  started = true;
+  setTimeout(()=>sections[0].classList.add('in'), 500);
+  if(!reduceMotion) setTimeout(()=>{ if(scrollY < 10 && !tourOn) tourStart(); }, 6500);
+}, 1400);
+</script>
+</body>
+</html>
